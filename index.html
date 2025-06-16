@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Prediction System</title>
+</head>
+<body>
+    <h1>Health Prediction System</h1>
+
+    <!-- Parkinson's Prediction Form -->
+    <h2>Parkinson's Prediction</h2>
+    <form method="POST" action="/predict_parkinsons">
+        <label>MDVP:Fo(Hz):</label> <input type="text" name="MDVP:Fo(Hz)"><br>
+        <label>MDVP:Fhi(Hz):</label> <input type="text" name="MDVP:Fhi(Hz)"><br>
+        <label>MDVP:Flo(Hz):</label> <input type="text" name="MDVP:Flo(Hz)"><br>
+        <input type="submit" value="Predict Parkinson's">
+    </form>
+    <h3>{{ parkinsons_result }}</h3>
+
+    <!-- Diabetes Prediction Form -->
+    <h2>Diabetes Prediction</h2>
+    <form method="POST" action="/predict_diabetes">
+        <label>Pregnancies:</label> <input type="text" name="Pregnancies"><br>
+        <label>Glucose:</label> <input type="text" name="Glucose"><br>
+        <label>Blood Pressure:</label> <input type="text" name="BloodPressure"><br>
+        <input type="submit" value="Predict Diabetes">
+    </form>
+    <h3>{{ diabetes_result }}</h3>
+
+    <!-- Adiposity Prediction Form -->
+    <h2>Adiposity Prediction</h2>
+    <form method="POST" action="/predict_adiposity">
+        <label>Height:</label> <input type="text" name="Height"><br>
+        <label>Weight:</label> <input type="text" name="Weight"><br>
+        <label>Waist:</label> <input type="text" name="Waist"><br>
+        <input type="submit" value="Predict Adiposity">
+    </form>
+    <h3>{{ adiposity_result }}</h3>
+</body>
+</html>
